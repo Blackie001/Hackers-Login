@@ -1,0 +1,175 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Consolas", monospace;
+}
+
+body {
+  background: black;
+  color: #00ff00;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Matrix canvas full page */
+#matrix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+}
+
+/* Semi-transparent overlay for hacking vibe */
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 10, 0, 0.4);
+  z-index: -1;
+}
+
+/* Login container */
+.login-container {
+  width: 380px;
+  margin: auto;
+  padding: 30px;
+  border: 2px solid #00ff00;
+  border-radius: 8px;
+  margin-top: 35vh;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 15px #008000;
+  animation: pulse 3s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 10px #004000;
+  }
+  to {
+    box-shadow: 0 0 25px #00ff00;
+  }
+}
+
+/* Title text */
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #00ff00;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 8px #0f0;
+}
+
+/* Form labels */
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #00ff00;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 35px 10px 10px; /* Space for icon */
+  background: black;
+  border: 1.5px solid #00ff00;
+  color: #00ff00;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+input:focus {
+  box-shadow: 0 0 6px #00ff00;
+}
+
+/* Password visibility icon */
+.password-wrapper {
+  position: relative;
+}
+
+#toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  font-size: 18px;
+  cursor: pointer;
+  color: #00ff00;
+}
+
+/* Login button */
+#login-btn {
+  width: 100%;
+  padding: 12px;
+  background: black;
+  border: 2px solid #00ff00;
+  color: #00ff00;
+  margin-top: 18px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#login-btn:hover {
+  background: #00ff00;
+  color: black;
+  box-shadow: 0 0 10px #00ff00;
+}
+
+/* Scan effect */
+.scan-effect {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 2px;
+  background: lime;
+  animation: scan 0.5s linear forwards;
+}
+
+@keyframes scan {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100%;
+  }
+}
+
+/* Textbox error shake */
+.input-error {
+  animation: shake 0.3s;
+  border-color: red !important;
+  color: red !important;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
+
+/* Prevent selection on icons */
+button, canvas {
+  user-select: none;
+}
+
+/* Make sure everything responds well */
+@media (max-width: 480px) {
+  .login-container {
+    width: 90%;
+    padding: 20px;
+  }
+}
