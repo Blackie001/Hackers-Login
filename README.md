@@ -26,7 +26,7 @@ Designed purely for **UI experimentation**, animation practice and cyber-aesthet
 ## 🚀 How to View
 1. Clone this repository:
    ```bash
-https://blackie001.github.io/contact0/
+https://blackie001.github.io/Hackers-Login/
 
 
 
@@ -35,8 +35,6 @@ https://blackie001.github.io/contact0/
 ## 🧪 Installation & Usage
 
 ```bash
-# Clone this repository
-git clone https://github.com/Blackie001/Hackers-Login
 
 # Open directly in browser
 cd <repository-name>
