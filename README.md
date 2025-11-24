@@ -21,6 +21,17 @@ Designed purely for **UI experimentation**, animation practice and cyber-aesthet
 
 ---
 
+
+
+## 🚀 How to View
+1. Clone this repository:
+   ```bash
+https://blackie001.github.io/contact0/
+
+
+
+---
+
 ## 🧪 Installation & Usage
 
 ```bash
